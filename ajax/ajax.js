@@ -48,7 +48,7 @@ async uploadFile() {
    }
   formData.append("file", fileupload.files[0]);
   if (fileupload.files[0]['size'] > this.size)
-   { alert("Sorry only "+this.size+" Bytes"); 
+   { alert("Sorry, only "+this.size+" Bytes"); 
      return; 
    }
  switch (fileupload.files[0]['type'])
@@ -59,7 +59,7 @@ async uploadFile() {
      break;    
      case "image/gif" : true;
      break;    
-     default: false; alert("Sorry only JPEG/PNG/GIF in "+this.size+" Bytes !"); return;  }
+     default: false; alert("Sorry, only JPEG/PNG/GIF in "+this.size+" Bytes !"); return;  }
 
 /* all passed, upload */
 
