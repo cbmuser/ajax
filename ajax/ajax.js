@@ -64,17 +64,21 @@ async uploadFile() {
 /* all passed, upload */
 
    document.getElementById(this.response).innerHTML = '<img src="images/loader.gif" />';
-  await fetch('php/upload.php', {
+  const transfer = await fetch('php/upload.php', {
     method: "POST", 
     body: formData
   }); 
 
 /* show image for demonstration, maybe kicked */
-
+ 
+  if (transfer['status'] == 200 && transfer['ok'] === true) {
    let image = "upload/"+fileupload.files[0]['name'];
-   document.getElementById(this.response).innerHTML = '<img src='+image+' />';
-
+    document.getElementById(this.response).innerHTML = '<img src='+image+' />';
+   }
+   else
+   {
+    document.getElementById(this.response).innerHTML = '<h3>Error</h3>';
+   }
   }
 }
-
 
