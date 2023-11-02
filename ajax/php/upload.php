@@ -12,10 +12,6 @@ $location = "../upload/".$filename;
 /* Save the uploaded file to the local filesystem */
  @move_uploaded_file($_FILES['file']['tmp_name'], $location); 
 
-
-
-echo "uploader !";
-
 ?>
 
 
