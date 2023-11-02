@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div { margin-top:2%; }
+</style>
+
+<title>AJAX Test</title>
+<script src="./ajax.js"></script>
+</head>
+<body>
+<!-- file limited to one byte, must be changed ! -->
+<script> const my = new ajax('ajax_container','GET',1); </script>
+<h1>AJAX Test</h1>
+<p>
+<button onclick="my.request('stuff/test.txt')">Click here !</button>
+</p>
+<input id="fileupload" type="file" name="fileupload" /> 
+<button id="upload-button" onclick="my.uploadFile();"> Upload </button>
+<div id="ajax_container"></div>
+</body>
+</html> 
