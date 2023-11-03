@@ -69,7 +69,7 @@ async uploadFile() {
     body: formData
   }); 
 
-/* show image for demonstration, maybe kicked */
+/* show image for demonstration, may be kicked */
  
   if (transfer['status'] == 200 && transfer['ok'] === true) {
    let image = "upload/"+fileupload.files[0]['name'];
